@@ -7,7 +7,10 @@ from warcio.bufferedreaders import DecompressingBufferedReader
 from . import get_test_file
 
 from io import BytesIO
-from collections import OrderedDict
+try:
+    from collections import OrderedDict
+except:
+    from ordereddict import OrderedDict
 import json
 from six import next
 
